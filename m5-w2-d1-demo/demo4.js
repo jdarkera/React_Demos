@@ -2,10 +2,11 @@
     constructor(props) {
       super(props);
       this.handleSubmit = this.handleSubmit.bind(this);
-      this.input = React.createRef();
+      this.input = React.createRef(); 
     }
-    handleSubmit(event) {
-      alert('A name was submitte:' + this.input.current.value);
+  
+    handleSubmit(event){
+      alert('A name was submitted: ' + this.input.current.value);
       event.preventDefault();
     }
   
@@ -14,7 +15,7 @@
         <form onSubmit={this.handleSubmit}>
           <label>
             Name:
-            <input type="text" ref={this.input}  />
+            <input type="text"  ref={this.input}/>
           </label>
           <input type="submit" value="Submit" />
         </form>
